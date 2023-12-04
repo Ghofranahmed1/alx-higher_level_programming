@@ -11,8 +11,12 @@ int check_cycle(listint_t *list)
 	listint_t *head;
 	listint_t *tail;
 
+	if(list->next ==  NULL)
+		return (0)
+
 	head = list;
 	tail = list;
+
 
 	while (head != NULL)
 	{
