@@ -12,7 +12,9 @@ int check_cycle(listint_t *list)
 	listint_t *tail;
 
 	if(list->next ==  NULL)
-		return (0)
+		return (0);
+	else
+	{
 
 	head = list;
 	tail = list;
@@ -26,4 +28,5 @@ int check_cycle(listint_t *list)
 			return (1);
 	}
 	return (0);
+	}
 }
