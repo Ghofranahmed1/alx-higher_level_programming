@@ -2,8 +2,8 @@
 """Defines a class Square"""
 
 
-class square:
-     """
+class Square:
+    """
     Class that defines properties of square by: (based on 0-square.py).
 
     Attributes:
@@ -15,4 +15,4 @@ class square:
         Args:
             size: size of the square.
         """
-        self.size = sizie
+        self.size = size
