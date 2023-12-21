@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Creat a square class"""
+"""Defines a class Square"""
 
 
 class square:
@@ -9,10 +9,8 @@ class square:
     Attribute:
         Size: size of a square(1 side).
         """
-
     def __init__(self, size):
-        """
-        Creats new instance of square.
+        """Creats new instance of square (1 side).
 
         Args:
             size: size of the square.
