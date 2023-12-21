@@ -10,7 +10,7 @@ class square:
         size: size of a square (1 side).
     """
     def __init__(self, size):
-        """Creats new instance of square (1 side).
+        """Creates new instances of square (1 side).
 
         Args:
             size: size of the square.
