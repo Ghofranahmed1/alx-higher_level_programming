@@ -107,4 +107,11 @@ class Rectangle:
         Returns:
             A string of the code needed to create the insta
         """
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+        return ":Rectangle({:d}, {:d})".format(self.__width, self.__height)
+    @staticmethod
+    def __del__():
+        """
+        no need to self parameter
+        "Prints message upon deletion of instance."""
+        print('Bye rectangle...')
+
