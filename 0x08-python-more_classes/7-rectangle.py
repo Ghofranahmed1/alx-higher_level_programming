@@ -2,7 +2,6 @@
 """class  that defines a rectangle
 """
 
-
 class Rectangle:
     """
     At this stage the class only creates private instance attributes
@@ -12,15 +11,14 @@ class Rectangle:
         """
          # A class variable, counting the number of rectanglers
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         # attribute assigment here engages setters defined below
         self.width = width
         self.height = height
         type(self).number_of_instances += 1
-        # i can use self.__class__.number_of_instances += 1 
-        # if i use self.number_of_instances that will be instance var not class
-        # and evey instance will have it own number_of_instances var
+        # i can use self.__class__.number_of_instances += 1
 
     @property
     def width(self):
@@ -103,7 +101,7 @@ class Rectangle:
             return rec
         for i in range(self.__height):
             for j in range(self.__width):
-                rec += '#'
+                rec += "{}".format(self.print_symbol)
             rec += '\n'
         return (rec)
     def __repr__(self):
