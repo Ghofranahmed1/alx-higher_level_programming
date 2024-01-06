@@ -18,7 +18,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """__width getter. so i can call the vaiable 
+        """__width getter. so i can call the vaiable
            and when we use this method th get or set a vaiable
            we use private variable __width
 
@@ -98,8 +98,10 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 rec += '#'
-            rec += '\n'
+            if (i < (self.height - 1)):
+                rec += '\n'
         return (rec)
+
     def __repr__(self):
         """
         Allows use of eval().
@@ -108,10 +110,11 @@ class Rectangle:
             A string of the code needed to create the insta
         """
         return ":Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
     @staticmethod
     def __del__():
         """
         no need to self parameter
-        "Prints message upon deletion of instance."""
+        "Prints message upon deletion of instance.
+        """
         print('Bye rectangle...')
-
