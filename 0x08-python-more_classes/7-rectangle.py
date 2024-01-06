@@ -2,6 +2,7 @@
 """class  that defines a rectangle
 """
 
+
 class Rectangle:
     """
     At this stage the class only creates private instance attributes
@@ -9,7 +10,7 @@ class Rectangle:
         width (int): horizontal dimension of rectangle, defaults to 0
         height (int): vertical dimension of rectangle, defaults to 0
         """
-         # A class variable, counting the number of rectanglers
+    """A class variable, counting the number of rectanglers"""
     number_of_instances = 0
     print_symbol = '#'
 
@@ -22,7 +23,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """__width getter. so i can call the vaiable 
+        """__width getter. so i can call the vaiable
            and when we use this method th get or set a vaiable
            we use private variable __width
 
@@ -102,8 +103,10 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 rec += "{}".format(self.print_symbol)
-            rec += '\n'
+            if (i < (self.__height)):
+                rec += '\n'
         return (rec)
+
     def __repr__(self):
         """
         Allows use of eval().
@@ -112,7 +115,8 @@ class Rectangle:
             A string of the code needed to create the insta
         """
         return ":Rectangle({:d}, {:d})".format(self.__width, self.__height)
-    @classmethod 
+
+    @classmethod
     # need to convrt it from classtatic into classmethod
     def __del__(cls):
         """
