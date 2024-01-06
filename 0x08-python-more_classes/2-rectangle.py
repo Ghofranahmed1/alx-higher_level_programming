@@ -18,7 +18,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """__width getter. so i can call the vaiable 
+        """__width getter. so i can call the vaiable
            and when we use this method th get or set a vaiable
            we use private variable __width
 
@@ -75,6 +75,7 @@ class Rectangle:
         if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
+
     def area(self):
         """
         Public instance method that returns the rectangle area """
