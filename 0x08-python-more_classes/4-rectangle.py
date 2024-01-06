@@ -18,7 +18,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """__width getter. so i can call the vaiable 
+        """__width getter. so i can call the vaiable
            and when we use this method th get or set a vaiable
            we use private variable __width
 
@@ -98,8 +98,10 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 rec += '#'
+            if (i < (__height - 1))
             rec += '\n'
         return (rec)
+
     def __repr__(self):
         """
         Allows use of eval().
