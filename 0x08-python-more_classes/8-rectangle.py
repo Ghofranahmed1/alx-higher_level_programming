@@ -10,7 +10,7 @@ class Rectangle:
         width (int): horizontal dimension of rectangle, defaults to 0
         height (int): vertical dimension of rectangle, defaults to 0
         """
-         # A class variable, counting the number of rectanglers
+    """ A class variable, counting the number of rectanglers"""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -22,7 +22,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """__width getter. so i can call the vaiable 
+        """__width getter. so i can call the vaiable
            and when we use this method th get or set a vaiable
            we use private variable __width
 
@@ -102,8 +102,10 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 rec += '#'
-            rec += '\n'
+            if (i < (self.__height - 1)):
+                rec += '\n'
         return (rec)
+
     def __repr__(self):
         """
         Allows use of eval().
@@ -112,7 +114,8 @@ class Rectangle:
             A string of the code needed to create the insta
         """
         return ":Rectangle({:d}, {:d})".format(self.__width, self.__height)
-    @classmethod 
+
+    @classmethod
     # need to convrt it from classtatic into classmethod
     def __del__(cls):
         """
@@ -120,6 +123,7 @@ class Rectangle:
         "Prints message upon deletion of instance."""
         cls.number_of_instances -= 1
         print('Bye rectangle...')
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """
