@@ -1,1 +1,2 @@
 0
+becouse variable's string can point to the same object, and since whe have created this string no need to vreat another object
