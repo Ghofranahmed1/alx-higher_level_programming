@@ -1,4 +1,4 @@
-#!/use/bin/python3
+#!/bin/usr/python3
 """ Class inherits_from"""
 
 
