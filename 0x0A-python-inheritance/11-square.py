@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Import inherted from class"""
 Rectangle = __import__('9-rectangle').Rectangle
 """ Square claa"""
 
