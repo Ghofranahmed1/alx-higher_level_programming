@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Import class inherted from"""
+"""Import the inherted from class"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 """ Class inherteed"""
 
