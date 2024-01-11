@@ -4,7 +4,7 @@
 
 def append_write(filename="", text=""):
     """
-    appends text to a file (UTF8) and returns the number of characters addended.
+    appends text to a file (UTF8),returns the number of characters addended
 
     Args:
         filename (str): The name of the file to write to.
