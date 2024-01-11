@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Create new file object and write in it"""
 def write_file(filename="", text=""):
     """
     Writes text to a file (UTF8) and returns the number of characters written.
