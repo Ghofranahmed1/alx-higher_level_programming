@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """i/o operation"""
 def write_file(filename="", text=""):
 	"""function that writes  to a text file (UTF8)
