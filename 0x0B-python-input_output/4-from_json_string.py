@@ -11,5 +11,4 @@ def from_json_string(my_str):
     Returns:
         converted data
     """
-    return json.load(my_obj)
-~                             
+    return json.loads(my_str)
