@@ -10,8 +10,15 @@
 0
 >>> add_intger(-2, 2)
 0
+The second argument is optional - by default, it is 98.
 >>> add_intger(2)
 100
+>>> add_intger(2.0, 3.0)
+5
+>>> add_intger(2.9, 0.2)
+2
+>>> add_intger(-2.9, -0.2)
+-2
 >>> add_intger()
 Trackback (most recent call last)
 TypeError: add_intger() missing 1 argument: 'a'
