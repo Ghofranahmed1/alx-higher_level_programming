@@ -11,7 +11,7 @@ My name is ghofran ahmed
 The parameter ```last_name``` is optional. If no last name is provided,
 an empty string is printed instead.
 
->>> say_my_name("ghofran")
+ >>> say_my_name("ghofran")
 My name is ghofran
 
 invalid names
