@@ -1,0 +1,37 @@
+>>> add_intger = __import__('0-add_intger').add_intger
+
+>>> add_intger(0, 0)
+0
+>>> add_intger(0, 15)
+15
+>>> add_intger(15, 0)
+15
+>>> add_intger(2, -2)
+0
+>>> add_intger(-2, 2)
+0
+>>> add_intger(2)
+100
+>>> add_intger()
+Trackback (most recent call last)
+TypeError: add_intger() missing 1 argument: 'a'
+>>> add_intger('a', 'b')
+Trackback (most recent call last)
+TypeError: a must be an integer
+>>> add_intger('a', 42)
+Trackback (most recent call last)
+TypeError: a must be an integer
+>>> add_intger('a')
+Trackback (most recent call last)
+TypeError: a must be an integer
+>>> add_intger(40, 'b')
+Trackback (most recent call last)
+TypeError: b must be an integer
+>>> add_intger(float('inf'), 0)
+Trackback (most recent call last)
+...
+OverflowError: cannot conver float infinity to intger
+>>> add_intger(0, float('inf')
+Trackback (most recent call last)
+...
+OverflowError: cannot conver float infinity to intger
