@@ -1,0 +1,40 @@
+***************************
+How to use 3-say_my_name.py
+***************************
+
+valid names
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("ghofran", "ahmed")
+My name is ghofran ahmed
+
+The parameter ```last_name``` is optional. If no last name is provided,
+an empty string is printed instead.
+
+>>> say_my_name("ghofran")
+My name is ghofran
+
+invalid names
+
+>>> say_my_name(6, "James")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+::
+
+>>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+::
+
+>>> say_my_name({"LeBron": 6, "James": 23}, 7.7) 
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+::
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
