@@ -21,7 +21,6 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    """ set value of width"""
     def width(self, value):
         self.validate_integer("width", value, False)
         self.__width = value
@@ -32,7 +31,6 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    """ set value of height"""
     def height(self, value):
         self.validate_integer("height", value, False)
         self.__height = value
@@ -43,7 +41,6 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    """ set value of x"""
     def x(self, value):
         self.validate_integer("x", value)
         self.__x = value
@@ -54,7 +51,6 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    """ set value of y"""
     def y(self, value):
         self.validate_integer("y", value)
         self.__y = value
@@ -67,3 +63,12 @@ class Rectangle(Base):
             raise ValueError("{} must be >= 0".format(name))
         elif not eq and value <= 0:
             raise ValueError("{} must be > 0".format(name))
+
+    def area(self):
+        """eturns the area value of the Rectangle instance"""
+        return self.width * self.height
+
+    def display(self):
+        """that prints in stdout the Rectangle instance"""
+        for i in range(self.height):
+            print('#' * self.width)
