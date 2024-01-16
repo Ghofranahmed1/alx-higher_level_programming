@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Rectangle class"""
+"""Rectangle class that use setter and getter for the vaild 
+    entered values"""
 from models.base import Base
 
 
