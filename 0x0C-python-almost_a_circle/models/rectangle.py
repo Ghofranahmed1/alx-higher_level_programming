@@ -3,10 +3,10 @@
 from models.base import Base
 
 class Rectangle(Base):
-    """Class initilaize a rectangle"""
+    '''A Rectangle class.'''
 
-    def __init__(self, width, height, x = 0, y = 0, id=None):
-        """calss constructor"""
+    def __init__(self, width, height, x=0, y=0, id=None):
+        '''Constructor.'''
         super().__init__(id)
         self.width = width
         self.height = height
@@ -14,45 +14,50 @@ class Rectangle(Base):
         self.y = y
 
     @property
-    def width_getter(self):
+    def width(self):
+        '''Width of this rectangle.'''
         return self.__width
+
     @width.setter
     def width(self, value):
-        self.validate_int("width", value, False)
+        self.validate_integer("width", value, False)
         self.__width = value
 
     @property
-    def height_getter(self):
+    def height(self):
+        '''Height of this rectangle.'''
         return self.__height
 
-    @property
-    def x_getter(self):
-        return self.__x
-
-    @property
-    def y_getter(self):
-        return self.__y
-
-    @height.srtter
+    @height.setter
     def height(self, value):
-        self.validate_int('height', value, False)
+        self.validate_integer("height", value, False)
         self.__height = value
 
-    @x.srtter
+    @property
+    def x(self):
+        '''x of this rectangle.'''
+        return self.__x
+
+    @x.setter
     def x(self, value):
-        self.validate_int('x', value)
+        self.validate_integer("x", value)
         self.__x = value
 
-    @y.srtter
+    @property
+    def y(self):
+        '''y of this rectangle.'''
+        return self.__y
+
+    @y.setter
     def y(self, value):
-        self.validate_int('y', value)
+        self.validate_integer("y", value)
         self.__y = value
 
-    def validate_int(self, name, value, eq=True):
+    def validate_integer(self, name, value, eq=True):
+        '''Method for validating the value.'''
         if type(value) != int:
-            raise ValueError("{} must be an integer".format(name))
-        if eq and value <= 0:
-            raise ValueError ("{} must be >= 0".format(name))
+            raise TypeError("{} must be an integer".format(name))
+        if eq and value < 0:
+            raise ValueError("{} must be >= 0".format(name))
         elif not eq and value <= 0:
             raise ValueError("{} must be > 0".format(name))
-
